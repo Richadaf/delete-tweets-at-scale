@@ -1,0 +1,35 @@
+{
+  "name": "Twitter Bulk Deleter",
+  "description": "Deletes tweets in bulk by simulating user clicks.",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "host_permissions": [
+    "*://x.com/*",
+    "*://twitter.com/*"
+  ]
+}

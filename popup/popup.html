@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Twitter Bulk Deleter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      width: 350px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 5px;
+      font-size: 0.9em;
+    }
+    th {
+      background: #f2f2f2;
+    }
+    .button {
+      margin: 5px 0;
+      padding: 7px 10px;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+    #progress {
+      margin-top: 10px;
+      font-size: 0.85em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>Twitter Bulk Deleter</h2>  
+  <!-- File input to load JSON tweets -->
+  <input type="file" id="jsonFile" accept=".json" />
+  <button id="loadBtn" class="button">Load Tweets</button>
+  
+  <!-- Checkbox to skip confirm step for each tweet -->
+  <div>
+    <label>
+      <input type="checkbox" id="autoConfirmAll" />
+      Auto-confirm deletions for all tweets
+    </label>
+  </div>
+  <label>
+    <input type="checkbox" id="selectAll"> Select All
+  </label>
+  
+  <!-- Table to preview tweets -->
+  <table id="tweetsTable">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Tweet ID</th>
+        <th>Text</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <!-- Buttons to delete tweets -->
+  <button id="deleteSelectedBtn" class="button" style="background:#d9534f; color: #fff;">
+    Delete Selected
+  </button>
+  <button id="deleteAllBtn" class="button" style="background:#5cb85c; color: #fff;">
+    Delete All
+  </button>
+  
+  <div id="progress"></div>
+  
+  
+  <script src="popup.js"></script>
+</body>
+</html>
