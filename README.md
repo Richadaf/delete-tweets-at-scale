@@ -129,7 +129,6 @@ const deleteMenuItem = document.querySelectorAll('NEW_SELECTOR_HERE');
 
 ## Contributions
 
-
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository.
@@ -146,6 +145,14 @@ Contributions are welcome! Please follow these steps:
    git push origin feature-name
    ```
 5. Open a pull request.
+
+### Our Top Contributors
+
+<a href="https://github.com/richadaf/delete-tweets-at-scale/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=richadaf/delete-tweets-at-scale" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
